@@ -9,17 +9,8 @@ main(@ARGV);
 
 sub main
 {
-  my $x = 5 != 5;
-  print("x is '$x' \n");
-
-  my $s = $ARGV[1] || "default";
-  message($s);
-
-  if((5 == 6) || (6 == 6)){ #&& / and || / or
-    message("this is true");
-  } else {
-    message("this is NOT true");
-  }
+  my $s = "string three";
+  message("string one" . ' ' ."string two" . ' ' . $s);
 }
 
 sub message

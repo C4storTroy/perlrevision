@@ -11,7 +11,15 @@ sub main
 {
   my @dirlist = <*>;
   foreach my $fn (@dirlist){
-    message($fn);
+    #message($fn);
+    if( -f $fn){
+      my $size = -s $fn;
+      message("$fn is a plain file ($size bytes)");
+    } elsif( -d $fn) {
+      message("$fn is a dir");
+    } else {
+      message("$fn is something else");
+    }
   }
 }
 

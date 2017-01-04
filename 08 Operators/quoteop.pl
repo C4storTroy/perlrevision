@@ -9,17 +9,10 @@ main(@ARGV);
 
 sub main
 {
-  my $x = 5 != 5;
-  print("x is '$x' \n");
-
-  my $s = $ARGV[1] || "default";
-  message($s);
-
-  if((5 == 6) || (6 == 6)){ #&& / and || / or
-    message("this is true");
-  } else {
-    message("this is NOT true");
-  }
+  my $s = 42;
+  message("This is the \"template.pl\" exercise file from Perl 5 Essential Training.");
+  message(q[This is the "template.pl" ($s) exercise file from Perl 5 Essential Training.]);
+  message(qq[This is the "template.pl" ($s) exercise file from Perl 5 Essential Training.]);
 }
 
 sub message
