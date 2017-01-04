@@ -2,7 +2,7 @@
 # RandomQuote.pl by Bill Weinman <http://bw.org/contact/>
 # Copyright (c) 2010 The BearHeart Group, LLC
 #
-# command line version. 
+# command line version.
 # usage: RandomQuote.pl
 #           will display one random quote from quotes.txt
 #        RandomQuote.pl filename
@@ -15,7 +15,7 @@ use strict;
 use warnings;
 use IO::File;
 
-my $quotes = [];    # container for quotes
+my $quotes = [];    # container for quotes - empty array hash
 
 main(@ARGV);
 
@@ -82,14 +82,14 @@ sub getToken
         return $1;
     } else {
         return undef;
-    } 
+    }
 }
 
 sub newQuote
 {
     push( @$quotes, {} );   # empty hash for new new quote
-    return $quotes->[-1];   # use this entry for our current quote 
-    
+    return $quotes->[-1];   # use this entry for our current quote
+
 }
 
 sub message
